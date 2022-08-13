@@ -1,0 +1,122 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.encabezado__contenedor {
+}
+
+.encabezado__contenedor-navegacion {
+  align-items: center;
+  display: flex;
+  height: 10vh;
+  justify-content: space-between;
+  background-color: darkblue;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .encabezado__contenedor-navegacion {
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.encabezado__titulo {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 1.2rem;
+  width: 50%;
+}
+
+.encabezado__navegacion {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.encabezado__link {
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .encabezado__link {
+    margin: 0.2rem;
+  }
+}
+
+.hero__container {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url('https://www.elheraldodechiapas.com.mx/local/municipios/90s1k8-artesanos-en-crisis-1.jpg/ALTERNATES/LANDSCAPE_768/artesanos%20en%20crisis%201.jpg');
+  background-position: center center;
+  background-repeat: none;
+  background-size: cover;
+}
+
+.hero__title {
+  color: white;
+  font-size: 3.4rem;
+  text-align: center;
+  text-shadow: 2px 2px 2px black;
+}
+
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 2.4rem;
+  }
+}
+
+
+.hero__subtitle {
+  color: white;
+  font-size: 2.4rem;
+  text-align: center;
+  text-shadow: 2px 2px 2px black;
+}
+
+@media (max-width: 768px) {
+  .hero__subtitle {
+    font-size: 1.4rem;
+  }
+}
+
+section {
+  height: auto;
+  background-color: darkblue;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+  }
+}
+
+section div {
+  height: 50vh;
+  margin: 1rem;
+  background-color: orange;
+  width: 33%;
+}
+
+@media (max-width: 768px) {
+  section div {
+    width: auto;
+  }
+}
+
